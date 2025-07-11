@@ -1,0 +1,173 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #004d99;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: flex;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* Lista de posts */
+.posts {
+  flex: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+article.post {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+article.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgb(0 0 0 / 0.15);
+}
+
+article.post img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+article.post .content {
+  padding: 1rem 1.5rem 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+article.post h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #004d99;
+}
+
+article.post h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+article.post h2 a:hover {
+  text-decoration: underline;
+}
+
+article.post p {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+article.post time {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Sidebar */
+aside.sidebar {
+  flex: 1;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+  padding: 1rem 1.5rem;
+  height: fit-content;
+}
+
+aside.sidebar h3 {
+  margin-bottom: 1rem;
+  color: #004d99;
+  font-weight: 700;
+  border-bottom: 2px solid #004d99;
+  padding-bottom: 0.3rem;
+}
+
+aside.sidebar ul {
+  list-style: none;
+}
+
+aside.sidebar ul li {
+  margin-bottom: 0.7rem;
+}
+
+aside.sidebar ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+aside.sidebar ul li a:hover {
+  color: #004d99;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #004d99;
+  color: white;
+  margin-top: 3rem;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+  .posts {
+    grid-template-columns: 1fr;
+  }
+  aside.sidebar {
+    margin-top: 2rem;
+  }
+}

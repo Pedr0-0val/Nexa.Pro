@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato - NexaPro</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #F2F2F2;
+      color: #2C2C2C;
+      padding-top: 100px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    header {
+      background: #fff;
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 32px;
+      margin-right: 8px;
+    }
+
+    .logo span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #007BFF;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links li a {
+      font-weight: 600;
+      color: #2C2C2C;
+      text-decoration: none;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #00E39F;
+    }
+
+    main {
+      margin-top: 2rem;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      color: #007BFF;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    label {
+      font-weight: 600;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    button {
+      background: #00E39F;
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #00c38b;
+    }
+
+    .whatsapp-direct {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .whatsapp-direct a {
+      color: #25D366;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid #ddd;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      margin: 0 0.5rem;
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Botão flutuante WhatsApp */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
+      font-size: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe57;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo" aria-label="NexaPro logo">
+      <img src="NexaPro logo.png" alt="Logo NexaPro" />
+      <span>NexaPro</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="servicos.html">Serviços</a></li>
+      <li><a href="portfolio.html">Portfólio</a></li>
+      <li><a href="quem-somos.html">Quem somos</a></li>
+      <li><a href="contato.html" class="active">Contato</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Fale com a NexaPro</h1>
+  <form action="mailto:contato@nexapro.com" method="POST" enctype="text/plain">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="Nome" required />
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="Email" required />
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="Mensagem" rows="5" required></textarea>
+
+    <button type="submit">Enviar Mensagem</button>
+  </form>
+
+  <div class="whatsapp-direct">
+    <p>Ou se preferir, fale diretamente pelo WhatsApp:</p>
+    <a href="https://wa.me/5599999999999?text=Olá%2C%20tenho%20interesse%20em%20um%20orçamento%20com%20a%20NexaPro!" target="_blank">Clique aqui para conversar</a>
+  </div>
+</main>
+
+<footer>
+  <p>Contato: <a href="mailto:contato@nexapro.com">contato@nexapro.com</a> | WhatsApp: <a href="https://wa.me/5599999999999" target="_blank">+55 99 99999-9999</a></p>
+  <p>Redes sociais: <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">LinkedIn</a></p>
+  <p>© 2025 NexaPro. Todos os direitos reservados.</p>
+</footer>
+
+<!-- Botão flutuante WhatsApp -->
+<a href="https://wa.me/5599999999999" target="_blank" class="whatsapp-btn" aria-label="WhatsApp NexaPro">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 24 24">
+    <path d="M20.52 3.48a11.92 11.92 0 00-17.1 0 11.92 11.92 0 00-3.51 8.46c0 2.08.58 4.12 1.67 5.9l-1.83 6.65 6.84-1.8a11.96 11.96 0 005.83 1.52h.01a11.92 11.92 0 008.46-3.51 11.92 11.92 0 000-16.77zM12 20a8 8 0 01-4.35-1.27l-.31-.2-4.05 1.06 1.08-4.03-.21-.33A8 8 0 1112 20zm3.04-5.41c-.18-.09-1.07-.52-1.24-.58-.17-.07-.3-.1-.43.1-.13.2-.5.57-.61.68-.11.11-.21.13-.39.05-.18-.07-.75-.28-1.42-.88-.52-.46-.87-1.03-.97-1.21-.1-.18-.01-.28.07-.37.07-.07.18-.18.28-.27.1-.09.13-.18.2-.3.07-.11.04-.21-.02-.3-.07-.09-.63-1.52-.87-2.08-.23-.54-.46-.47-.63-.48l-.54-.01c-.18 0-.47.07-.71.33s-.93.91-.93 2.22c0 1.31.95 2.57 1.08 2.75.12.17 1.86 2.88 4.52 4.04.63.27 1.12.43 1.51.55.63.2 1.21.17 1.67.1.51-.08 1.56-.64 1.78-1.26.22-.62.22-1.15.15-1.26-.07-.11-.28-.18-.55-.27z"/>
+  </svg>
+</a>
+
+</body>
+</html>
